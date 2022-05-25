@@ -16,7 +16,7 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
     role_project supp = new role_project("Supplier");
     role_project customer = new role_project("Customer");
 
-    User user1 = new User("U1","Calvin", "Hermawan", "1234", admin);
+    User user1 = new User("U1","Calvin", "1", "1234", admin);
     User user2 = new User("U2","Osamah", "2", "1234", saleE);
 
     Items item1 = new Items("CPU", "I1", 20.00, 5);
@@ -42,6 +42,9 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
         if (userName== user1.getUserName()&& passNum == user1.getPassNum()){
             return user1;
         }
+        if (userName== user2.getUserName()&& passNum == user2.getPassNum()){
+            return user2;
+        }
         return null;
     }
 
@@ -54,9 +57,29 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
     @Override
     public boolean deleteUser(String userName) throws RemoteException {
         // TODO Auto-generated method stub
+        if (userName == user1.getUserName()){
+            user1=null;
+            return true;
+        }
+        if (userName == user2.getUserName()){
+            user2=null;
+            return true;
+        }
         return false;
     }
 
+    @Override
+    public String updateUser(User user,String firstName, String lastName, String passNum) throws RemoteException {
+        if(user == user1){
+            User user1 = new User("U1",firstName, lastName, passNum, admin);
+            return("New user info: "+ user1.getUserName()+"\t Passport "+user1.getPassNum());
+        }
+        if(user == user2){
+            User user2 = new User("U2",firstName, lastName, passNum, saleE);
+            return("New user info: "+ user2.getUserName()+"\t Passport "+user2.getPassNum());
+        }
+        return("Error");
+    }
     // @Override
     // public boolean updateUser(String userName) throws RemoteException {
     //     // TODO Auto-generated method stub
@@ -87,10 +110,6 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
         return null;
     }
 
-    @Override
-    public boolean updateUser(User user) throws RemoteException {
-        // TODO Auto-generated method stub
-        return false;
-    }
+    
     
 }

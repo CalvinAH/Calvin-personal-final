@@ -13,7 +13,7 @@ public interface ComShop extends Remote{
     User userlogin(String userName, String passNum) throws RemoteException;
     boolean regiserRole(User role) throws RemoteException; //ignore
     boolean deleteUser(String userName) throws RemoteException;
-    boolean updateUser(User user) throws RemoteException;
+    String updateUser(User user, String firstName, String lastName, String passNum) throws RemoteException;
     List<Items> getitems() throws RemoteException;
     boolean addItems(Items items) throws RemoteException;
     boolean deleteItems(String iid) throws RemoteException;
