@@ -7,7 +7,7 @@ import java.rmi.registry.LocateRegistry;
 
 import Interface.ComShop;
 
-public class RMIserver {
+public class RMIserver { //calvin and Osamah
     public static void main(String[] args) {
 		try {
 			// specify a port for RMI service
