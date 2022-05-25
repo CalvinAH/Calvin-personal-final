@@ -6,9 +6,12 @@ import java.util.List;
 
 import Classes.Items;
 import Classes.User;
+import Classes.role_project;
 import Interface.ComShop;
 
 public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
+    role_project roles = new role_project("Customer","Sales Executive","Admin","Supplier");
+    User user1 = new User("1","Calvin", "Hermawan", "1234", roles.getRole3());
 
     protected ComShop_Impl() throws RemoteException {
         super();
@@ -18,6 +21,9 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
     @Override
     public boolean userCheck(String userName) throws RemoteException {
         // TODO Auto-generated method stub
+        if (userName == "Calvin Hermawan"){
+            return true;
+        }
         return false;
     }
 

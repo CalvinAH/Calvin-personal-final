@@ -10,21 +10,38 @@ public class User  implements Serializable{//calvin's
     private String userName;
     private String id; //user id
     private String passNum;
-    private role_project role;
 
+    private role_project role;
+    private String role1;
     
     public User(String id){
         this.id = id;
     }
-    public User(String id,String firstName, String lastName, String userName, String passNum, role_project role) { //need role and or id
+    
+    public String getRole1() {
+        return role1;
+    }
+
+    public void setRole1(String role1) {
+        this.role1 = role1;
+    }
+
+    public User(String id,String firstName, String lastName, String passNum, role_project role) { //need role and or id
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName; 
-        this.userName = userName;
+        this.userName = firstName +" "+lastName;
         this.passNum = passNum;
         this.role = role;
     }
-
+    public User(String id,String firstName, String lastName, String passNum, String role0) { //need role and or id
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName; 
+        this.userName = firstName +" "+lastName;
+        this.passNum = passNum;
+        this.setRole1(role1);
+    }
     public User() {
     }
 
