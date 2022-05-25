@@ -28,7 +28,6 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
     
     @Override
     public boolean userCheck(String userName) throws RemoteException {
-        // TODO Auto-generated method stub
         if (userName == user1.getUserName()||userName== user2.getUserName()){
             return true;
             
@@ -38,7 +37,6 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
 
     @Override
     public User userlogin(String userName, String passNum) throws RemoteException {
-        // TODO Auto-generated method stub
         if (userName== user1.getUserName()&& passNum == user1.getPassNum()){
             return user1;
         }
@@ -56,7 +54,6 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
 
     @Override
     public boolean deleteUser(String userName) throws RemoteException {
-        // TODO Auto-generated method stub
         if (userName == user1.getUserName()){
             user1=null;
             return true;

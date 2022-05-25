@@ -21,10 +21,8 @@ public class RMIserver { //calvin and Osamah
 
 			System.out.println("remote service has registered and started successfully, waiting for client connection....");
 		} catch (RemoteException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MalformedURLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
