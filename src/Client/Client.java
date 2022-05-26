@@ -10,7 +10,7 @@ import Classes.User;
 import Interface.ComShop;
 
 public class Client {
-    public static void main(String[] args) {
+    public static void main(String[] args) {//victoria and sadab
 		try {
             Scanner sc = new Scanner(System.in);
 			//String url = "//127.0.0.1:8819/SAMPLE-SERVER";

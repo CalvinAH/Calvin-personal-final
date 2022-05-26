@@ -19,8 +19,12 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
     User user1 = new User("U1","Calvin", "1", "1234", admin);
     User user2 = new User("U2","Osamah", "2", "1234", saleE);
 
-    Items item1 = new Items("CPU", "I1", 20.00, 5);
-    Items item2 = new Items("GPU", "I2", 20.00, 4);
+    Items item1 = new Items("CPU", "I16", 250.00, 5);
+    Items item2 = new Items("GPU", "I20", 203.00, 4);
+    Items item3 = new Items("Laptop","I01", 1240.5, 0);
+    Items item4 = new Items("Mobile","I02", 240.1, 0);
+    Items item5 = new Items("Power Charger","I03", 240.1, 0);
+    Items item6 = new Items("MoterBike","I04", 38000.24, 0);
     protected ComShop_Impl() throws RemoteException {
         super();
         

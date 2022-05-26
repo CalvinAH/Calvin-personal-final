@@ -7,7 +7,7 @@ import java.util.List;
 import Classes.Items;
 import Classes.User;
 
-//comshop
+
 public interface ComShop extends Remote{
     boolean userCheck(String userName) throws RemoteException; 
     User userlogin(String userName, String passNum) throws RemoteException;
@@ -19,6 +19,3 @@ public interface ComShop extends Remote{
     boolean deleteItems(String iid) throws RemoteException;
     List<Items>UpdateItems() throws RemoteException; //ignore
 }
-//public interface CalculatorInterface extends Remote{
-// 	int calculate(int x,int y) throws RemoteException;
-// }
