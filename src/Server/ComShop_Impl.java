@@ -10,7 +10,6 @@ import Classes.role_project;
 import Interface.ComShop;
 
 public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
-    //role_project roles = new role_project("Admin","Sales Executive","Supplier","Customer");
     role_project admin = new role_project("Admin");
     role_project saleE = new role_project("Sales Executive");
     role_project supp = new role_project("Supplier");
