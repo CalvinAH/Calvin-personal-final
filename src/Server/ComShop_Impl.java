@@ -35,7 +35,10 @@ public class ComShop_Impl extends UnicastRemoteObject implements ComShop{
             return true;
             
         }
-        return false;
+        else{
+            return false;
+        }
+        
     }
 
     @Override

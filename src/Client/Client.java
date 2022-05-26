@@ -20,14 +20,14 @@ public class Client {
             int firstC =sc.nextInt();
             if(firstC== 1){
                 System.out.println("Enter username: ");
-                String userName = sc.nextLine();
+                String userName = sc.next();
                 System.out.println("get the result via RMI, and the result is: "+comShop.userCheck(userName));
             }
             if(firstC== 2){
                 System.out.println("Enter username: ");
-                String userName = sc.nextLine();
+                String userName = sc.next();
                 System.out.println("Enter passport: ");
-                String passNum = sc.nextLine();
+                String passNum = sc.next();
                 User currentUser = comShop.userlogin(userName, passNum);
                 if (currentUser == null){
                     System.out.println("No user");

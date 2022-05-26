@@ -8,8 +8,7 @@ public class Items implements Serializable{ //calvin's
     private String iid; //item id
     private double price;
     private int stock;
-
-    
+  
     public Items(String iid){
         this.iid = iid;
     }
