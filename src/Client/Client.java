@@ -13,11 +13,7 @@ public class Client {
     public static void main(String[] args) {//victoria and sadab
 		try {
             Scanner sc = new Scanner(System.in);
-			//String url = "//127.0.0.1:8819/SAMPLE-SERVER";
             String url = "//127.0.0.1:8819/COMP-SERVER";
-            //127.0.0.1:8819/COMP-SERVER
-			// obtain a object instance from a remote server
-			//CalculatorInterface calculator =  (CalculatorInterface) Naming.lookup(url);
             ComShop comShop = (ComShop) Naming.lookup(url);
             System.out.println("has found a remote service successfully.");
             System.out.println("Press 1 for check user, 2 for login: ");

@@ -1,20 +1,12 @@
 package Classes;
 public class role_project{ //calvin's
     private String role;
-    // private String role1;
-    // private String role2;
-    // private String role3;
-    // private String role4;
+    
 
     public role_project(String role){
         this.role = role;
     }
-    // public role_project(String role1, String role2, String role3, String role4){
-    //     this.role1 = role1;
-    //     this.role2 =role2;
-    //     this.role3 = role3;
-    //     this.role4 = role4;
-    // }
+    
     public role_project(){}
     public String getRole() {
         return role;
@@ -23,6 +15,20 @@ public class role_project{ //calvin's
     public void setRole(String role) {
         this.role = role;
     }
+
+    
+}
+// private String role1;
+    // private String role2;
+    // private String role3;
+    // private String role4;
+    
+    // public role_project(String role1, String role2, String role3, String role4){
+    //     this.role1 = role1;
+    //     this.role2 =role2;
+    //     this.role3 = role3;
+    //     this.role4 = role4;
+    // }
 
     // public String getRole1() {
     //     return role1;
@@ -55,4 +61,3 @@ public class role_project{ //calvin's
     // public void setRole4(String role4) {
     //     this.role4 = role4;
     // }
-}
